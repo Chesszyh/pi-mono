@@ -76,7 +76,7 @@ describe("ModelRegistry", () => {
 		name: "Test OpenAI Model",
 		api: "openai-completions",
 		provider: "openai",
-		baseUrl: "https://api.openai.com/v1",
+		baseUrl: "https://localhost:8317/v1",
 		reasoning: false,
 		input: ["text"],
 		cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },

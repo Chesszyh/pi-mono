@@ -13,7 +13,6 @@ packages/*/dist-firefox/
 .env
 
 # Editor files
-.vscode/
 .zed/
 .idea/
 *.swp
@@ -35,3 +34,7 @@ out.html
 packages/coding-agent/binaries/
 todo.md
 plans/
+
+# Docs
+.zread/
+docs/
