@@ -153,7 +153,7 @@ function resolveAzureConfig(
 ): { baseUrl: string; apiVersion: string } {
 	const apiVersion = options?.azureApiVersion || process.env.AZURE_OPENAI_API_VERSION || DEFAULT_AZURE_API_VERSION;
 
-	const baseUrl = options?.azureBaseUrl?.trim() || process.env.AZURE_OPENAI_BASE_URL?.trim() || undefined;
+	const baseUrl = options?.azureBaseUrl?.trim() || process.env.AZURE_OPENAI_BASE_URL_PI?.trim() || undefined;
 	const resourceName = options?.azureResourceName || process.env.AZURE_OPENAI_RESOURCE_NAME;
 
 	let resolvedBaseUrl = baseUrl;
@@ -168,7 +168,7 @@ function resolveAzureConfig(
 
 	if (!resolvedBaseUrl) {
 		throw new Error(
-			"Azure OpenAI base URL is required. Set AZURE_OPENAI_BASE_URL or AZURE_OPENAI_RESOURCE_NAME, or pass azureBaseUrl, azureResourceName, or model.baseUrl.",
+			"Azure OpenAI base URL is required. Set AZURE_OPENAI_BASE_URL_PI or AZURE_OPENAI_RESOURCE_NAME, or pass azureBaseUrl, azureResourceName, or model.baseUrl.",
 		);
 	}
 

@@ -178,7 +178,7 @@ function createClient(
 
 	return new OpenAI({
 		apiKey,
-		baseURL: process.env.OPENAI_BASE_URL || model.baseUrl,
+		baseURL: process.env.OPENAI_BASE_URL_PI || model.baseUrl,
 		dangerouslyAllowBrowser: true,
 		defaultHeaders: headers,
 	});

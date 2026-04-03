@@ -48,7 +48,7 @@ if [[ "$NO_ENV" == "true" ]]; then
   unset AWS_CONTAINER_CREDENTIALS_FULL_URI
   unset AWS_WEB_IDENTITY_TOKEN_FILE
   unset AZURE_OPENAI_API_KEY
-  unset AZURE_OPENAI_BASE_URL
+  unset AZURE_OPENAI_BASE_URL_PI
   unset AZURE_OPENAI_RESOURCE_NAME
   echo "Running without API keys..."
 fi

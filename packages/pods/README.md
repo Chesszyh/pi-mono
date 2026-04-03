@@ -38,7 +38,7 @@ pi agent qwen "What is the Fibonacci sequence?"
 pi agent qwen -i
 
 # Use with any OpenAI-compatible client
-export OPENAI_BASE_URL='http://1.2.3.4:8001/v1'
+export OPENAI_BASE_URL_PI='http://1.2.3.4:8001/v1'
 export OPENAI_API_KEY=$PI_API_KEY
 ```
 

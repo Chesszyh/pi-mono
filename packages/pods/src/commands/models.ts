@@ -373,7 +373,7 @@ WRAPPER
 		console.log(chalk.cyan("─".repeat(50)));
 
 		console.log(`\n${chalk.bold("Export for shell:")}`);
-		console.log(chalk.gray(`export OPENAI_BASE_URL="http://${host}:${port}/v1"`));
+		console.log(chalk.gray(`export OPENAI_BASE_URL_PI="http://${host}:${port}/v1"`));
 		console.log(chalk.gray(`export OPENAI_API_KEY="${process.env.PI_API_KEY || "your-api-key"}"`));
 		console.log(chalk.gray(`export OPENAI_MODEL="${modelId}"`));
 
@@ -389,7 +389,7 @@ WRAPPER
   )
 
   # CLI
-  curl $OPENAI_BASE_URL/chat/completions \\
+  curl $OPENAI_BASE_URL_PI/chat/completions \\
     -H "Authorization: Bearer $OPENAI_API_KEY" \\
     -H "Content-Type: application/json" \\
     -d '{"model":"${modelId}","messages":[{"role":"user","content":"Hi"}]}'`),

@@ -12,9 +12,9 @@ This project is a monorepo for an agentic framework. This guide helps you set up
 ### Proxy / Custom Base URL
 If you are using a proxy (like `localhost:8317`), you can override the base URL for different providers in your `.env` file:
 ```env
-OPENAI_BASE_URL=https://localhost:8317/v1
-ANTHROPIC_BASE_URL=https://your-anthropic-proxy.com/v1
-GOOGLE_BASE_URL=https://your-google-proxy.com/v1
+OPENAI_BASE_URL_PI=https://localhost:8317/v1
+ANTHROPIC_BASE_URL_pi=https://your-anthropic-proxy.com/v1
+GOOGLE_BASE_URL_pi=https://your-google-proxy.com/v1
 ```
 These variables will override the hardcoded defaults in the models configuration.
 
@@ -67,4 +67,4 @@ You can run these from the VSCode Command Palette (`Ctrl+Shift+P`) -> `Tasks: Ru
 
 - **Node Version**: If you get errors about `--env-file`, ensure you are using Node.js >= 20.6.0.
 - **Large Downloads**: If tests start downloading massive files, ensure `PI_OFFLINE=1` is set in your environment.
-- **401/Unauthorized**: Check your `.env` file and ensure `OPENAI_BASE_URL` is correct if you use a proxy.
+- **401/Unauthorized**: Check your `.env` file and ensure `OPENAI_BASE_URL_PI` is correct if you use a proxy.
