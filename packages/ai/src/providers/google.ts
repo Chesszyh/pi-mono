@@ -318,8 +318,8 @@ function createClient(
 	optionsHeaders?: Record<string, string>,
 ): GoogleGenAI {
 	const httpOptions: { baseUrl?: string; apiVersion?: string; headers?: Record<string, string> } = {};
-	if (model.baseUrl) {
-		httpOptions.baseUrl = model.baseUrl;
+	if (process.env.GOOGLE_BASE_URL || model.baseUrl) {
+		httpOptions.baseUrl = process.env.GOOGLE_BASE_URL || model.baseUrl;
 		httpOptions.apiVersion = ""; // baseUrl already includes version path, don't append
 	}
 	if (model.headers || optionsHeaders) {

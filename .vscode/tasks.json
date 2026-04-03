@@ -1,0 +1,81 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "label": "npm: build",
+      "detail": "Build all packages in the monorepo"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "group": "build",
+      "label": "npm: dev",
+      "detail": "Run all packages in dev mode (watch)"
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "group": "build",
+      "label": "npm: clean",
+      "detail": "Clean all packages"
+    },
+    {
+      "type": "npm",
+      "script": "check",
+      "group": "test",
+      "label": "npm: check",
+      "detail": "Run linting and typechecking (biome & tsgo)"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "label": "npm: test",
+      "detail": "Run all tests in all packages"
+    },
+    {
+      "type": "shell",
+      "command": "./pi-test.sh",
+      "label": "pi-test",
+      "detail": "Run coding-agent tests directly from source"
+    },
+    {
+      "label": "npm: build (coding-agent)",
+      "type": "npm",
+      "script": "build",
+      "path": "packages/coding-agent",
+      "group": "build"
+    },
+    {
+      "label": "npm: build (ai)",
+      "type": "npm",
+      "script": "build",
+      "path": "packages/ai",
+      "group": "build"
+    },
+    {
+      "label": "npm: build (agent)",
+      "type": "npm",
+      "script": "build",
+      "path": "packages/agent",
+      "group": "build"
+    },
+    {
+      "label": "npm: dev (web-ui)",
+      "type": "npm",
+      "script": "dev",
+      "path": "packages/web-ui/example",
+      "group": "build",
+      "detail": "Start Vite dev server for Web UI"
+    }
+  ]
+}
